@@ -1,0 +1,126 @@
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+
+  --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Big Shoulders Display", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin: 1.5rem;
+  min-width: 375px;
+  max-width: 450px;
+}
+
+.vehicle {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 2.5rem;
+}
+
+img {
+  width: 64px;
+  height: 40px;
+  margin-top: 1.5rem;
+}
+
+.sedan {
+  background-color: var(--Bright-orange);
+  border-radius: 12px 12px 0 0;
+}
+
+.suv {
+  background-color: var(--Dark-cyan);
+}
+
+.luxury {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 0 0 12px 12px;
+}
+
+h1 {
+  color: var(--Very-light-gray-background-headings-buttons);
+  /* margin: 1.5rem 0; */
+  /* font-size: 1.5rem; */
+}
+
+p {
+  color: var(--Transparent-white-paragraphs);
+  margin: 1.5rem 0 ;
+  font-size: small;
+  line-height: 2;
+}
+
+.btn {
+  background-color: var(--Very-light-gray-background-headings-buttons);
+  padding: 16px 25px;
+  border-radius: 50px;
+  border: none;
+  margin: 1rem 0;
+}
+
+.btn1 {
+  color: var(--Bright-orange);
+}
+
+.btn2 {
+  color: var(--Dark-cyan);
+}
+
+.btn3 {
+  color: var(--Very-dark-cyan);
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: var(--Very-light-gray-background-headings-buttons);
+  border: 1px solid var(--Very-light-gray-background-headings-buttons);
+  transition-duration: 0.3s;
+  scale: 1.05;
+  cursor: pointer;
+}
+
+@media (min-width: 750px) {
+  .card {
+    display: flex;
+    flex-direction: row;
+    max-width: 900px;
+  }
+
+  .sedan {
+    border-radius: 12px 0 0 12px;
+  }
+
+  .luxury {
+    border-radius: 0 12px 12px 0;
+  }
+
+  .btn {
+  margin: 3rem 0 1rem 0;
+  }
+}
